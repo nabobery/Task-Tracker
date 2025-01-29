@@ -17,6 +17,7 @@ The **Task Tracker CLI** is a command-line interface application written in Go. 
 - **List Tasks**: View tasks, filtered by status (`todo`, `in-progress`, `done`) or view all tasks.
 
 Each task has the following properties:
+
 - **ID**: A unique identifier.
 - **Description**: A short description of the task.
 - **Status**: Task state (`todo`, `in-progress`, `done`).
@@ -34,12 +35,14 @@ Each task has the following properties:
 ## Installation
 
 1. Clone the repository:
+
    ```bash
-   git clone <repository-url>
+   https://github.com/nabobery/task-tracker.git
    cd task-tracker
    ```
 
 2. Build the CLI:
+
    ```bash
    # For Linux/Mac
    go build -o task-cli
@@ -48,9 +51,8 @@ Each task has the following properties:
    go build -o task-cli.exe main.go
    ```
 
-
-
 3. Run the executable:
+
    ```bash
    ./task-cli
    ```
@@ -60,90 +62,117 @@ Each task has the following properties:
 ## Usage
 
 ### Add a Task
+
 Add a new task with a description.
+
 ```bash
 task-cli add "Buy groceries"
 ```
+
 Output:
-```
+
+```bash
 Task added successfully (ID: 1)
 ```
 
 ---
 
 ### Update a Task
+
 Update a task's description using its ID.
+
 ```bash
 task-cli update 1 "Buy groceries and cook dinner"
 ```
+
 Output:
-```
+
+```bash
 Task 1 updated successfully
 ```
 
 ---
 
 ### Delete a Task
+
 Delete a task by its ID.
+
 ```bash
 task-cli delete 1
 ```
+
 Output:
-```
+
+```bash
 Task 1 deleted successfully
 ```
 
 ---
 
 ### Mark a Task as In Progress
+
 Change the status of a task to `in-progress` using its ID.
+
 ```bash
 task-cli mark-in-progress 1
 ```
+
 Output:
-```
+
+```bash
 Task 1 marked as in-progress
 ```
 
 ---
 
 ### Mark a Task as Done
+
 Change the status of a task to `done` using its ID.
+
 ```bash
 task-cli mark-done 1
 ```
+
 Output:
-```
+
+```bash
 Task 1 marked as done
 ```
 
 ---
 
 ### List All Tasks
+
 List all tasks with their details.
+
 ```bash
 task-cli list
 ```
+
 Example Output:
-```
-ID	Status		Created				Description
---	------		-------				-----------
-1	todo		2025-01-20 10:00:00	Buy groceries
+
+```bash
+ID   Status      Created              Description
+--   ------      -------              -----------
+1    todo       2025-01-20 10:00:00 Buy groceries
 ```
 
 ---
 
 ### List Tasks by Status
+
 List tasks filtered by their status: `todo`, `in-progress`, or `done`.
 
 ```bash
 task-cli list todo
 ```
+
 Output:
-```
-ID	Status		Created				Description
---	------		-------				-----------
-1	todo		2025-01-20 10:00:00	Buy groceries
+
+```bash
+ID   Status      Created              Description
+--   ------      -------              -----------
+1    todo       2025-01-20 10:00:00 Buy groceries
 ```
 
 ---
